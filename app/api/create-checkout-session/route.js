@@ -22,12 +22,12 @@ export async function POST(request) {
             line_items: [
                 {
                     price_data: {
-                        currency: 'usd',
+                        currency: 'bdt',
                         product_data: {
                             name: booking.serviceName,
                             description: `Booking ID: ${booking._id}`,
                         },
-                        unit_amount: parseInt((booking.totalCost / 120) * 100), // Amount in cents (Converted from BDT)
+                        unit_amount: parseInt(booking.totalCost * 100), // Amount in paisa
                     },
                     quantity: 1,
                 },

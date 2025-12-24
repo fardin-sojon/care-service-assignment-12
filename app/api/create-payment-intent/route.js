@@ -19,13 +19,11 @@ export async function POST(request) {
         }
 
         // Amount must be in cents/paisa
-        // Conversion: BDT to USD. Assuming 1 USD = 120 BDT
-        const amountInUsd = booking.totalCost / 120;
-        const amount = parseInt(amountInUsd * 100);
+        const amount = parseInt(booking.totalCost * 100);
 
         const paymentIntent = await stripe.paymentIntents.create({
             amount: amount,
-            currency: "usd", // Request user confirmation for currency
+            currency: "bdt",
             payment_method_types: ["card"],
         });
 
