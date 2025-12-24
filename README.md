@@ -7,8 +7,7 @@ The platform emphasizes a clean user experience, secure transactions, and effici
 
 ---
 
-### 🔗 [🌐 Live Link](#)
-*Add your live deployment link here*
+### 🔗 [🌐 Live Link](https://care-service-assignment-12.vercel.app/)
 
 ## 🗝 Key Features
 
@@ -308,11 +307,6 @@ care-service-assignment-12/
 - [ ] Calendar integration for scheduling
 - [ ] Multi-language support
 - [ ] Mobile app version
-
----
-
-## 📝 License
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
