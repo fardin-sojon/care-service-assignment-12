@@ -18,12 +18,15 @@ export async function POST(request) {
             return NextResponse.json({ error: "Booking not found" }, { status: 404 });
         }
 
-        // Amount must be in cents/paisa
-        const amount = parseInt(booking.totalCost * 100);
+        // Amount must be in cents
+        // Conversion: BDT to USD. Adjusted rate to 127 based on Stripe's real-time rate observation.
+        const amountInUsd = booking.totalCost / 127;
+        const amount = parseInt(amountInUsd * 100);
 
         const paymentIntent = await stripe.paymentIntents.create({
             amount: amount,
-            currency: "bdt",
+            currency: "usd",
+            payment_method_types: ["card"],
             payment_method_types: ["card"],
         });
 
