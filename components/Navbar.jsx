@@ -3,8 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+    const pathname = usePathname();
     const { user, logOut } = useContext(AuthContext);
     const [profileImg, setProfileImg] = useState("https://res.cloudinary.com/dnv4bs90s/image/upload/v1766586547/lm5qsbommvqxryozyjv3.webp");
 
@@ -21,9 +23,9 @@ const Navbar = () => {
     }
 
     const navLinks = <>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/services">Services</Link></li>
-        {user && <li><Link href="/my-bookings">My Bookings</Link></li>}
+        <li><Link href="/" className={pathname === '/' ? 'text-primary font-bold' : ''}>Home</Link></li>
+        <li><Link href="/services" className={pathname === '/services' ? 'text-primary font-bold' : ''}>Services</Link></li>
+        {user && <li><Link href="/my-bookings" className={pathname === '/my-bookings' ? 'text-primary font-bold' : ''}>My Bookings</Link></li>}
     </>
 
     return (
