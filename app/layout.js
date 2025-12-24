@@ -10,12 +10,15 @@ const lato = Lato({ subsets: ['latin'], weight: ['100', '300', '400', '700', '90
 export const metadata = {
   title: "Care Service - Trusted Care Services",
   description: "Find reliable baby sitting, elderly care, and more.",
+  icons: {
+    icon: '/assets/logo/care-service-logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={lato.className}>
+      <body className={lato.className} suppressHydrationWarning={true}>
         <AuthProvider>
           <Navbar />
           <main className="min-h-screen">

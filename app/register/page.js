@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useContext, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import Swal from 'sweetalert2';
 import { AuthContext } from '@/providers/AuthProvider';
 import { imageUpload } from '@/lib/utils';
@@ -215,14 +216,13 @@ const RegisterForm = ({ redirect }) => {
                                     type="file"
                                     className="file-input file-input-bordered w-full"
                                     {...register("image", {
-                                        required: true,
                                         onChange: handleImageChange
                                     })}
                                 />
                                 {selectedImage && (
                                     <div className="avatar">
-                                        <div className="w-12 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                            <img src={selectedImage} alt="Preview" className="object-cover w-full h-full" />
+                                        <div className="w-12 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 relative">
+                                            <Image src={selectedImage} alt="Preview" fill className="object-cover rounded-full" />
                                         </div>
                                     </div>
                                 )}

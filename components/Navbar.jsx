@@ -1,10 +1,18 @@
 "use client"
 import Link from 'next/link';
-import React, { useContext } from 'react';
+import Image from 'next/image';
+import React, { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [profileImg, setProfileImg] = useState("https://res.cloudinary.com/dnv4bs90s/image/upload/v1766586547/lm5qsbommvqxryozyjv3.webp");
+
+    useEffect(() => {
+       if(user?.photoURL) {
+         setProfileImg(user.photoURL);
+       }
+    }, [user?.photoURL]);
 
     const handleLogOut = () => {
         logOut()
@@ -31,7 +39,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <Link href="/" className="text-xl font-bold text-primary flex items-center gap-2">
-                    <img src="/assets/logo/care-service-logo.png" alt="Care Service" className="h-8 w-8" />
+                    <Image src="/assets/logo/care-service-logo.png" alt="Care Service" width={32} height={32} className="h-8 w-8" />
                     Care Service
                 </Link>
             </div>
@@ -44,11 +52,14 @@ const Navbar = () => {
                 {user ? (
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar border border-primary/20 hover:border-primary">
-                            <div className="w-10 rounded-full">
-                                <img 
-                                    alt="User Profile" 
-                                    src={user?.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} 
-                                    onError={(e) => { e.target.src = "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" }}
+                            <div className="w-10 h-10 rounded-full relative">
+                                <Image
+                                    alt="User Profile"
+                                    src={profileImg}
+                                    width={40}
+                                    height={40}
+                                    className="rounded-full object-cover w-full h-full"
+                                    onError={() => setProfileImg("https://i.ibb.co/MgsD15N/user.png")}
                                 />
                             </div>
                         </div>

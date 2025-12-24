@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Professional Babysitting Service",
+    "description": "Expert babysitters available 24/7 to take care of your children with love and attention. Our trained professionals ensure your child's safety, engage them in educational activities, and maintain their daily routines. Background verified and experienced caregivers.",
+    "price": 500,
+    "duration": "Per Day",
+    "category": "Child Care",
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop",
+    "features": [
+      "Background verified caregivers",
+      "24/7 availability",
+      "Educational activities",
+      "Meal preparation",
+      "Emergency response trained",
+      "CPR certified"
+    ],
+    "availability": "Available",
+    "rating": 4.8,
+    "totalBookings": 245
+  },
+  {
+    "title": "Elderly Care & Companionship",
+    "description": "Compassionate caregivers providing personalized elderly care services. Assistance with daily activities, medication reminders, mobility support, and companionship. Our caregivers treat your loved ones with dignity and respect.",
+    "price": 800,
+    "duration": "Per Day",
+    "category": "Elderly Care",
+    "image": "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=800&h=600&fit=crop",
+    "features": [
+      "Medication management",
+      "Mobility assistance",
+      "Companionship services",
+      "Personal hygiene support",
+      "Meal preparation",
+      "Medical appointment coordination"
+    ],
+    "availability": "Available",
+    "rating": 4.9,
+    "totalBookings": 189
+  },
+  {
+    "title": "Special Needs Care",
+    "description": "Specialized care for children and adults with special needs. Our trained professionals provide individualized support, therapy assistance, and create a nurturing environment. Experience in autism, developmental delays, and physical disabilities.",
+    "price": 1000,
+    "duration": "Per Day",
+    "category": "Special Care",
+    "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop",
+    "features": [
+      "Specialized training",
+      "Therapy support",
+      "Behavioral management",
+      "Communication assistance",
+      "Sensory activities",
+      "Progress tracking"
+    ],
+    "availability": "Available",
+    "rating": 5.0,
+    "totalBookings": 156
+  },
+  {
+    "title": "Post-Surgery Care",
+    "description": "Professional post-operative care at home. Trained nurses and caregivers assist with wound care, medication, mobility, and recovery exercises. Ensure a smooth and safe recovery in the comfort of your home.",
+    "price": 1200,
+    "duration": "Per Day",
+    "category": "Medical Care",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+    "features": [
+      "Registered nurse support",
+      "Wound care management",
+      "Medication administration",
+      "Physical therapy guidance",
+      "Vital signs monitoring",
+      "Doctor coordination"
+    ],
+    "availability": "Available",
+    "rating": 4.9,
+    "totalBookings": 134
+  },
+  {
+    "title": "Overnight Baby Care",
+    "description": "Overnight babysitting service for parents who need a good night's sleep. Our experienced night nannies handle feeding, diaper changes, and soothing your baby while you rest. Perfect for new parents or those recovering from childbirth.",
+    "price": 600,
+    "duration": "Per Night",
+    "category": "Child Care",
+    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&h=600&fit=crop",
+    "features": [
+      "Overnight supervision",
+      "Feeding and diaper changes",
+      "Sleep training support",
+      "Newborn care expertise",
+      "Parent rest assured",
+      "Emergency contact available"
+    ],
+    "availability": "Available",
+    "rating": 4.7,
+    "totalBookings": 210
+  },
+  {
+    "title": "Dementia & Alzheimer's Care",
+    "description": "Specialized memory care services for individuals with dementia and Alzheimer's. Our trained caregivers provide cognitive stimulation, routine maintenance, safety supervision, and emotional support in a familiar environment.",
+    "price": 1100,
+    "duration": "Per Day",
+    "category": "Elderly Care",
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=600&fit=crop",
+    "features": [
+      "Memory care specialists",
+      "Cognitive activities",
+      "Safety monitoring",
+      "Routine maintenance",
+      "Family communication",
+      "Wandering prevention"
+    ],
+    "availability": "Available",
+    "rating": 4.8,
+    "totalBookings": 98
+  },
+  {
+    "title": "Nanny & Tutor Combo",
+    "description": "Combined childcare and educational support service. Our nanny-tutors provide supervision, homework help, educational games, and skill development. Perfect for working parents who want their children to learn while being cared for.",
+    "price": 700,
+    "duration": "Per Day",
+    "category": "Child Care",
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop",
+    "features": [
+      "Homework assistance",
+      "Educational activities",
+      "Skill development",
+      "Creative learning",
+      "Progress reports",
+      "Parent updates"
+    ],
+    "availability": "Available",
+    "rating": 4.6,
+    "totalBookings": 267
+  },
+  {
+    "title": "Hospice & Palliative Care",
+    "description": "Compassionate end-of-life care providing comfort, dignity, and emotional support. Our trained caregivers focus on quality of life, pain management support, and family assistance during difficult times.",
+    "price": 1500,
+    "duration": "Per Day",
+    "category": "Medical Care",
+    "image": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&h=600&fit=crop",
+    "features": [
+      "Comfort care",
+      "Emotional support",
+      "Family counseling",
+      "Symptom management",
+      "24/7 availability",
+      "Spiritual care coordination"
+    ],
+    "availability": "Available",
+    "rating": 5.0,
+    "totalBookings": 67
+  },
+  {
+    "title": "Respite Care Service",
+    "description": "Temporary relief care for family caregivers. Our respite caregivers step in to provide the same quality care while you take a break, attend appointments, or handle personal matters. Available for few hours to several days.",
+    "price": 650,
+    "duration": "Per Day",
+    "category": "Elderly Care",
+    "image": "https://images.unsplash.com/photo-1586105449897-20b5efeb3233?w=800&h=600&fit=crop",
+    "features": [
+      "Flexible scheduling",
+      "Seamless transition",
+      "Familiar care routine",
+      "Short or long term",
+      "Emergency availability",
+      "Activity engagement"
+    ],
+    "availability": "Available",
+    "rating": 4.7,
+    "totalBookings": 178
+  },
+  {
+    "title": "Physical Therapy Support",
+    "description": "In-home physical therapy assistance for rehabilitation and recovery. Our trained aides work alongside therapists to help with exercises, mobility training, and daily therapy routines. Ideal for post-injury or surgery recovery.",
+    "price": 900,
+    "duration": "Per Session",
+    "category": "Medical Care",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop",
+    "features": [
+      "Exercise assistance",
+      "Mobility training",
+      "Equipment setup",
+      "Progress tracking",
+      "Therapist coordination",
+      "Safety supervision"
+    ],
+    "availability": "Available",
+    "rating": 4.8,
+    "totalBookings": 145
+  },
+  {
+    "title": "Newborn Care Specialist",
+    "description": "Expert care for newborns in the first few months. Our newborn care specialists assist with feeding, sleeping routines, bathing, and provide guidance to new parents. Available for day or overnight shifts.",
+    "price": 850,
+    "duration": "Per Day",
+    "category": "Child Care",
+    "image": "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop",
+    "features": [
+      "Newborn expertise",
+      "Feeding support",
+      "Sleep training",
+      "Parent education",
+      "Lactation guidance",
+      "Record keeping"
+    ],
+    "availability": "Available",
+    "rating": 4.9,
+    "totalBookings": 198
+  },
+  {
+    "title": "Disability Support Worker",
+    "description": "Dedicated support for individuals with physical or intellectual disabilities. Our support workers assist with daily living activities, community participation, skill development, and independence building.",
+    "price": 950,
+    "duration": "Per Day",
+    "category": "Special Care",
+    "image": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=800&h=600&fit=crop",
+    "features": [
+      "Daily living support",
+      "Community access",
+      "Skill development",
+      "Personal care",
+      "Social activities",
+      "Independence training"
+    ],
+    "availability": "Available",
+    "rating": 4.8,
+    "totalBookings": 112
+  }
+]

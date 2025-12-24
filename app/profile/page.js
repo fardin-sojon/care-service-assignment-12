@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { AuthContext } from "@/providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { imageUpload } from "@/lib/utils";
 
 const ProfilePage = () => {
@@ -10,6 +11,7 @@ const ProfilePage = () => {
     const router = useRouter();
     const [uploading, setUploading] = React.useState(false);
     const [dbUser, setDbUser] = React.useState(null);
+    const [profileImg, setProfileImg] = React.useState(null);
 
     // Redirect if not authenticated
     useEffect(() => {
@@ -24,6 +26,7 @@ const ProfilePage = () => {
                 .then(res => res.json())
                 .then(data => setDbUser(data));
         }
+        setProfileImg(user?.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp");
     }, [user]);
 
     const handleUpdateProfile = async (e) => {
@@ -108,8 +111,16 @@ const ProfilePage = () => {
             <div className="max-w-lg mx-auto bg-base-100 shadow-xl rounded-2xl overflow-hidden border border-base-200 min-h-[500px] flex flex-col justify-center">
                 <div className="bg-primary/10 p-10 text-center flex-grow flex flex-col justify-center items-center">
                     <div className="avatar mb-4">
-                        <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img src={user?.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} alt="Profile" />
+                        <div className="w-32 h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 relative">
+                            {profileImg && (
+                                <Image
+                                    src={profileImg}
+                                    alt="Profile"
+                                    fill
+                                    className="rounded-full object-cover"
+                                    onError={() => setProfileImg("https://i.ibb.co/MgsD15N/user.png")}
+                                />
+                            )}
                         </div>
                     </div>
                     <h2 className="text-3xl font-bold text-primary">{user?.displayName}</h2>
