@@ -1,19 +1,17 @@
 "use client"
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
-import { useContext, useState } from 'react';
+import { useContext, useState, Suspense } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Swal from 'sweetalert2'
 
-const Login = () => {
+const LoginForm = ({ redirect }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
-    const searchParams = useSearchParams();
-    const redirect = searchParams.get('redirect');
 
     const onSubmit = (data) => {
         const { email, password } = data;
@@ -157,6 +155,26 @@ const Login = () => {
                 </div>
             </div>
         </div>
+    );
+};
+
+const SearchParamsWrapper = () => {
+    const searchParams = useSearchParams();
+    const redirect = searchParams.get('redirect');
+    return <LoginForm redirect={redirect} />;
+};
+
+const Login = () => {
+    return (
+        <Suspense fallback={
+            <div className="hero min-h-screen bg-base-200">
+                <div className="flex justify-center items-center">
+                    <span className="loading loading-spinner loading-lg"></span>
+                </div>
+            </div>
+        }>
+            <SearchParamsWrapper />
+        </Suspense>
     );
 };
 

@@ -1,11 +1,9 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Swal from 'sweetalert2';
 
-const PaymentSuccess = () => {
-    const searchParams = useSearchParams();
-    const sessionId = searchParams.get('session_id');
+const PaymentSuccessForm = ({ sessionId }) => {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
 
@@ -59,6 +57,27 @@ const PaymentSuccess = () => {
                 </div>
             )}
         </div>
+    );
+};
+
+const SearchParamsWrapper = () => {
+    const searchParams = useSearchParams();
+    const sessionId = searchParams.get('session_id');
+    return <PaymentSuccessForm sessionId={sessionId} />;
+};
+
+const PaymentSuccess = () => {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                    <span className="loading loading-spinner loading-lg text-primary"></span>
+                    <p className="mt-4 text-xl">Loading...</p>
+                </div>
+            </div>
+        }>
+            <SearchParamsWrapper />
+        </Suspense>
     );
 };
 

@@ -1,21 +1,19 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
-import { useContext, useState } from 'react';
+import { useContext, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Swal from 'sweetalert2';
 import { AuthContext } from '@/providers/AuthProvider';
 import { imageUpload } from '@/lib/utils';
 
-const Register = () => {
+const RegisterForm = ({ redirect }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
-    const searchParams = useSearchParams();
-    const redirect = searchParams.get('redirect');
 
     const [selectedImage, setSelectedImage] = useState(null);
 
@@ -241,6 +239,26 @@ const Register = () => {
                 </div>
             </div >
         </div >
+    );
+};
+
+const SearchParamsWrapper = () => {
+    const searchParams = useSearchParams();
+    const redirect = searchParams.get('redirect');
+    return <RegisterForm redirect={redirect} />;
+};
+
+const Register = () => {
+    return (
+        <Suspense fallback={
+            <div className="hero min-h-screen bg-base-200">
+                <div className="flex justify-center items-center">
+                    <span className="loading loading-spinner loading-lg"></span>
+                </div>
+            </div>
+        }>
+            <SearchParamsWrapper />
+        </Suspense>
     );
 };
 
