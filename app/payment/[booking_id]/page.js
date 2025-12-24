@@ -59,7 +59,7 @@ const PaymentPage = ({ params }) => {
 
                     <div className="flex justify-between items-center mb-4">
                         <span className="font-semibold">Amount to Pay:</span>
-                        <span className="text-xl font-bold text-primary">${booking.totalCost}</span>
+                        <span className="text-xl font-bold text-primary">{booking.totalCost} BDT</span>
                     </div>
 
                     <p className="text-gray-500 mb-6">You will be redirected to Stripe's secure payment page to complete the transaction.</p>

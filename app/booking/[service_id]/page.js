@@ -135,8 +135,7 @@ const Booking = () => {
                                 required: true,
                                 onChange: (e) => {
                                     setSelectedDivision(e.target.value);
-                                    setSelectedDistrict(''); // Reset district
-                                    // Reset city as well if needed, though hook form handles value sync mostly
+                                    setSelectedDistrict(''); 
                                 }
                             })}
                         >
