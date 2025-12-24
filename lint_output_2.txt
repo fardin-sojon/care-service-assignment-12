@@ -1,0 +1,37 @@
+
+> client@0.1.0 lint
+> eslint
+
+
+I:\Programming Hero\Web_Module-75_Assignment-12\Assignment-12\care-service-assignment-12\app\booking\[service_id]\page.js
+  156:66  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+  154 |                     <div>
+  155 |                         <h3 className="font-bold">Total Cost</h3>
+> 156 |                         <div className="text-xl">{calculateTotal(watch("duration"), watch("durationType"))} BDT</div>
+      |                                                                  ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  157 |                     </div>
+  158 |                 </div>
+  159 |  react-hooks/incompatible-library
+
+I:\Programming Hero\Web_Module-75_Assignment-12\Assignment-12\care-service-assignment-12\app\page.js
+   41:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   63:25  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   87:18  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+   87:83  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  103:18  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  103:74  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+I:\Programming Hero\Web_Module-75_Assignment-12\Assignment-12\care-service-assignment-12\app\service\[service_id]\page.js
+  25:46  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+I:\Programming Hero\Web_Module-75_Assignment-12\Assignment-12\care-service-assignment-12\app\services\page.js
+  25:33  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+I:\Programming Hero\Web_Module-75_Assignment-12\Assignment-12\care-service-assignment-12\components\Navbar.jsx
+  43:33  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+✖ 10 problems (4 errors, 6 warnings)
+
