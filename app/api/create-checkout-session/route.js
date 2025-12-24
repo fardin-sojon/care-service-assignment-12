@@ -27,7 +27,7 @@ export async function POST(request) {
                             name: booking.serviceName,
                             description: `Booking ID: ${booking._id}`,
                         },
-                        unit_amount: parseInt(booking.totalCost * 100), // Amount in cents
+                        unit_amount: parseInt((booking.totalCost / 120) * 100), // Amount in cents (Converted from BDT)
                     },
                     quantity: 1,
                 },

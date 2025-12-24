@@ -19,9 +19,9 @@ export async function POST(request) {
         }
 
         // Amount must be in cents/paisa
-        // Assuming booking.price is in currency units (e.g., USD or BDT)
-        // If price is 500, amount should be 50000 cents
-        const amount = parseInt(booking.totalCost * 100);
+        // Conversion: BDT to USD. Assuming 1 USD = 120 BDT
+        const amountInUsd = booking.totalCost / 120;
+        const amount = parseInt(amountInUsd * 100);
 
         const paymentIntent = await stripe.paymentIntents.create({
             amount: amount,
